@@ -8,7 +8,6 @@ $(document).on("input", "textarea, input", function () {
     timer = setTimeout(sendRequest, 700);
 });
 
-
 function sendRequest() {
     $(_this).highlightWithinTextarea("destroy");
     $(_this).highlightWithinTextarea({
@@ -16,8 +15,8 @@ function sendRequest() {
     });
     changeStyleMistake();
 }
-function changeStyleMistake() {
 
+function changeStyleMistake() {
     if (parseInt($(_this).css('padding-top')) < 10){
         $('.hwt-highlights').css('margin-top', parseInt($(_this).css('height'))   / 2 + 'px');
     }else{
@@ -33,7 +32,6 @@ function changeStyleMistake() {
             console.log($(this).text());
             $(this).css('background-color', 'transparent !important');
             $(this).addClass("mark-border-ext");
-
         });
     });
 }
